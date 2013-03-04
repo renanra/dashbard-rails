@@ -37,17 +37,32 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem 'rspec-rails'
 gem 'sidekiq'
 gem 'sinatra'
 gem 'slim'
 
 gem 'whenever', require: false
-gem 'factory_girl'
-gem 'simple_cov'
-gem 'awesome_print'
-gem 'pry'
+
+# Tests and development gems
+group :development, :test do
+  gem 'pry'
+  gem 'awesome_print'
+  # gem 'better_errors'
+  # gem 'binding_of_caller'
+  gem 'rspec-rails'
+  gem 'rspec-mocks'
+  gem 'guard-rspec'
+  gem 'rb-fsevent'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+end
 
 group :development do
-  gem 'guard-rspec'
+  gem 'quiet_assets'
+end
+
+group :test do
+  gem 'shoulda'
+  gem 'simplecov'
+  gem 'rails_best_practices'
 end
