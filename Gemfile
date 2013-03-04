@@ -47,3 +47,7 @@ gem 'factory_girl'
 gem 'simple_cov'
 gem 'awesome_print'
 gem 'pry'
+
+group :development do
+  gem 'guard-rspec'
+end

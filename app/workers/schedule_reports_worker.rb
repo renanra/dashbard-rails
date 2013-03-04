@@ -1,7 +1,7 @@
-class PrintTimeWorker
+class ScheduleReportsWorker
   include Sidekiq::Worker
 
   def perform(time)
-    `touch ~/#{time}.txt`
+    5
   end
 end
